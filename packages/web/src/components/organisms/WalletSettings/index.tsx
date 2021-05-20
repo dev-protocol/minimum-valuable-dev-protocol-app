@@ -55,6 +55,8 @@ export const WalletSettings = (_: Props) => {
         }
       : web3Modal?.cachedProvider === providers.METAMASK.id
       ? { name: providers.METAMASK.name, logo: providers.METAMASK.logo }
+      : web3Modal?.cachedProvider === 'custom-torus'
+      ? { name: providers.TORUS.name, logo: providers.TORUS.logo }
       : undefined
   }, [web3Modal?.cachedProvider])
 
